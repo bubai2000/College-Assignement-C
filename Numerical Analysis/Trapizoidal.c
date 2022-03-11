@@ -21,6 +21,6 @@ void main()
     }
     printf("\n x=%.6f \t y=%.6f",b,f(b));
     sum+=f(b);
-    I=(h/3)*sum;
+    I=(h/2)*sum;
     printf("\n Result of integration= %.6f",I);
 }
