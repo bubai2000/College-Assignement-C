@@ -24,13 +24,13 @@ void main()
         {
             b=c;
             printf("\n\n Root exists in Left half!");
-            printf("\n New a=%f, New c=%f",a,b);
+            printf("\n New a=%f, New b=%f",a,b);
         }
         else
         {
             a=c;
             printf("\n\n Root exists in Right half!");
-            printf("\n New a=%f, New c=%f",a,b);
+            printf("\n New a=%f, New b=%f",a,b);
         }
         n--;
       }
@@ -38,68 +38,68 @@ void main()
 }
 
 /* Output
- Enter upper limit, lower limit, no of tries=>0 1 20
+ Enter upper limit, lower limit, no of tries=>1 -1 20
 
-
- Root exists in Left half!
- New a=1.000000, New c=0.500000
 
  Root exists in Right half!
- New a=0.750000, New c=0.500000
+ New a=0.000000, New b=1.000000
 
  Root exists in Right half!
- New a=0.625000, New c=0.500000
+ New a=0.500000, New b=1.000000
 
  Root exists in Left half!
- New a=0.625000, New c=0.562500
+ New a=0.500000, New b=0.750000
 
  Root exists in Left half!
- New a=0.625000, New c=0.593750
-
- Root exists in Left half!
- New a=0.625000, New c=0.609375
-
- Root exists in Left half!
- New a=0.625000, New c=0.617188
+ New a=0.500000, New b=0.625000
 
  Root exists in Right half!
- New a=0.621094, New c=0.617188
+ New a=0.562500, New b=0.625000
 
  Root exists in Right half!
- New a=0.619141, New c=0.617188
-
- Root exists in Left half!
- New a=0.619141, New c=0.618164
-
- Root exists in Left half!
- New a=0.619141, New c=0.618652
-
- Root exists in Left half!
- New a=0.619141, New c=0.618896
-
- Root exists in Left half!
- New a=0.619141, New c=0.619019
+ New a=0.593750, New b=0.625000
 
  Root exists in Right half!
- New a=0.619080, New c=0.619019
-
- Root exists in Left half!
- New a=0.619080, New c=0.619049
+ New a=0.609375, New b=0.625000
 
  Root exists in Right half!
- New a=0.619064, New c=0.619049
+ New a=0.617188, New b=0.625000
 
  Root exists in Left half!
- New a=0.619064, New c=0.619057
+ New a=0.617188, New b=0.621094
 
  Root exists in Left half!
- New a=0.619064, New c=0.619061
+ New a=0.617188, New b=0.619141
 
  Root exists in Right half!
- New a=0.619062, New c=0.619061
+ New a=0.618164, New b=0.619141
 
  Root exists in Right half!
- New a=0.619061, New c=0.619061
+ New a=0.618652, New b=0.619141
 
- Approximate root=> 0.619061
+ Root exists in Right half!
+ New a=0.618896, New b=0.619141
+
+ Root exists in Right half!
+ New a=0.619019, New b=0.619141
+
+ Root exists in Left half!
+ New a=0.619019, New b=0.619080
+
+ Root exists in Right half!
+ New a=0.619049, New b=0.619080
+
+ Root exists in Left half!
+ New a=0.619049, New b=0.619064
+
+ Root exists in Right half!
+ New a=0.619057, New b=0.619064
+
+ Root exists in Right half!
+ New a=0.619061, New b=0.619064
+
+ Root exists in Left half!
+ New a=0.619061, New b=0.619062
+
+ Approximate root=> 0.619062
  */

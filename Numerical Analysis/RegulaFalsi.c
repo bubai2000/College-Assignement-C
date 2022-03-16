@@ -40,14 +40,12 @@ void main()
         if(r<0)
         {
             b=c;
-            printf("\n\n Root exists in Left half!");
-            printf("\n New a=%f, New c=%f",a,b);
+            printf("\n New a=%f, New b=%f",a,b);
         }
         else
         {
             a=c;
-            printf("\n\n Root exists in Right half!");
-            printf("\n New a=%f, New c=%f",a,b);
+            printf("\n New a=%f, New b=%f",a,b);
         }
         n--;
       }
@@ -55,5 +53,30 @@ void main()
 }
 
 /* Output
- 
+ Enter upper limit, lower limit, no of tries=>1 -2 20
+
+
+ Root exists in Left half!
+ New a=-2.000000, New b=0.868296
+ New a=-2.000000, New b=0.768116
+ New a=-2.000000, New b=0.702637
+ New a=-2.000000, New b=0.664061
+ New a=-2.000000, New b=0.642732
+ New a=-2.000000, New b=0.631355
+ New a=-2.000000, New b=0.625403
+ New a=-2.000000, New b=0.622321
+ New a=-2.000000, New b=0.620734
+ New a=-2.000000, New b=0.619919
+ New a=-2.000000, New b=0.619501
+ New a=-2.000000, New b=0.619286
+ New a=-2.000000, New b=0.619177
+ New a=-2.000000, New b=0.619120
+ New a=-2.000000, New b=0.619092
+ New a=-2.000000, New b=0.619077
+ New a=-2.000000, New b=0.619069
+ New a=-2.000000, New b=0.619065
+ New a=-2.000000, New b=0.619063
+ New a=-2.000000, New b=0.619062
+
+ Approximate root=> 0.619062
  */
