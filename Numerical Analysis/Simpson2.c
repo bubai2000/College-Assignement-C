@@ -1,5 +1,5 @@
 /* 
-Calculating an integration using Trapizoidal rule
+Calculating an integration using Simpson rule
 Roll no.: MTUG/118/19
 */
 #include<stdio.h>
