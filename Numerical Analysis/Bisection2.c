@@ -38,3 +38,10 @@ void main()
       printf("\n Total no of iterations=>%d",n);
       printf("\n Approximate root=> %f",c);
 }
+
+/* Output
+ Enter upper limit, lower limit=>-1 1
+
+ Total no of iterations=>21
+ Approximate root=> 0.619061
+*/
