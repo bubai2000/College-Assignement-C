@@ -10,10 +10,13 @@ float f(float x)
 }
 void main()
 {
-    float a,b,c,x,y,r,f1;
+    float a=0.0,b=0.1,c,x,y,r,f1;
     int n=0; 
-    printf("\n Enter upper limit, lower limit=>");
-    scanf("%f%f",&b,&a);
+    while(f(a)*f(b)>=0)   // Finding A probable range of root
+    {
+        a=b;
+        b+=0.1;
+    }
     while(1)
     {
         f1=a-b;
