@@ -1,5 +1,5 @@
 /* 
-Method of Regula-Falsi
+Method of Newton-Raphson
 Roll no.: MTUG/118/19
 */
 #include<stdio.h>
@@ -14,14 +14,9 @@ float fd(float x)
 }
 void main()
 {
-    float a=0.0,b=0.1,x,f1;
-    int n=1; 
-    while(f(a)*f(b)>=0)
-    {
-        a=b;
-        b+=0.1;
-    }
-    x=(a-((f(a))/(fd(a))));
+    float a=0.0,x=0.0,f1;
+    int n=0; 
+    // x=(a-((f(a))/(fd(a))));
     while(1)
     {
         a=x;
@@ -37,8 +32,6 @@ void main()
 }
 
 /* Output
- Enter upper limit, lower limit=>1 -1
-
- Total no of iterations=>23
+Total no of iterations=>4
  Approximate root=> 0.619061 (Correct upto 6 decimal!)
 */
