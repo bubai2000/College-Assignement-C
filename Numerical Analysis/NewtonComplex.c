@@ -30,7 +30,7 @@ void main()
         b=y;
         x=(x-((u(a,b)*ux(a,b))-v(a,b)*uy(a,b))/(pow(ux(a,b),2)+pow(uy(a,b),2)));
         y=(y-((v(a,b)*ux(a,b))+u(a,b)*uy(a,b))/(pow(ux(a,b),2)+pow(uy(a,b),2)));
-        printf("\n New guess=> f +i %f",a,b);
+        printf("\n New guess=> %f +i %f",a,b);
         if((fabs(x-a))<0.000001 || (fabs(y-b))<0.000001)
         {
             break;
@@ -42,13 +42,13 @@ void main()
 }
 
 /* Output
-New guess=> f +i 0.100000
- New guess=> f +i -0.762946
- New guess=> f +i 0.043808
- New guess=> f +i -0.533715
- New guess=> f +i -0.485625
- New guess=> f +i -0.500049
- New guess=> f +i -0.500000
+New guess=> 0.100000 +i 0.100000
+ New guess=> -0.762946 +i 0.184060
+ New guess=> 0.043808 +i 0.520613
+ New guess=> -0.533715 +i 0.697986
+ New guess=> -0.485625 +i 0.870357
+ New guess=> -0.500049 +i 0.865947
+ New guess=> -0.500000 +i 0.866025
  Total no of iterations=>7
  Approximate root=> -0.500000 + i0.866025 (Correct upto 6 decimal!)
-*/
+ */
