@@ -6,19 +6,19 @@ Roll no.: MTUG/118/19
 #include<math.h>
 float u(float x, float y)
 {
-    return (x*x*x*x-6*x*x*y*y+y*y*y*y+x*x*x-3*x*y*y+5*x*x-5*y*y+4*x+4);
+    return (pow(x,4)-(6*pow(x,2)*pow(y,2))+pow(y,4)+pow(x,3)-3*x*pow(y,2)+5*pow(x,2)-5*pow(y,2)+4*x+4);
 }
 float v(float x, float y)
 {
-    return (4*x*y*x*x-4*x*y*y*y+3*x*x*y-y*y*y+10*x*y+4*y);
+    return (4*pow(x,3)*y-4*x*pow(y,3)+3*pow(x,2)*y-pow(y,3)+10*x*y+4*y);
 }
 float ux(float x, float y)
 {
-    return (4*x*x*x-12*x*y*y+3*x*x-3*y*y+10*x+4);
+    return (4*pow(x,3)-12*x*pow(y,2)+3*pow(x,2)-3*pow(y,2)+10*x+4);
 }
 float uy(float x, float y)
 {
-    return (-12*x*x*y+4*pow(y,3)-6*x*y-10*y);
+    return (-12*pow(x,2)*y+4*pow(y,3)-6*x*y-10*y);
 }
 void main()
 {
