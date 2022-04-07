@@ -16,7 +16,7 @@ void main()
     scanf("%f",&x1);
     for(int i=0;i<5;i++)
     {
-        printf("\n x %f, y %f =>",x[i],y[i]);
+        printf("\n x%d = %f, y%d = %f",i+1,x[i],i+1,y[i]);
     }
     for(int i=0;i<5;i++)
     {
@@ -25,16 +25,34 @@ void main()
             if(i!=j)
             {
                q=q*(x[i]-x[j]); 
+               p=p*(x1-x[j]);
             }
-            p=p*(x1-x[j]);
         }
         r=p/q;
-        printf("\n r=%f, r*yi=%f",r,r*y[i]);
         sum=sum+(r*y[i]);
         p=1;
         q=1;
-        printf("\nSum=%f",sum);
     }
     printf("\nValue at %f = %f",x1,sum);
 }
+/* Output
 
+ Enter x 1, y 1 =>93.0 11.38
+
+ Enter x 2, y 2 =>96.2 12.80
+
+ Enter x 3, y 3 =>100.0 14.70
+
+ Enter x 4, y 4 =>104.2 17.07
+
+ Enter x 5, y 5 =>108.7 19.91
+
+ Enter point at which value to be calculated=>102
+
+ x1 = 93.000000, y1 = 11.380000
+ x2 = 96.199997, y2 = 12.800000
+ x3 = 100.000000, y3 = 14.700000
+ x4 = 104.199997, y4 = 17.070000
+ x5 = 108.699997, y5 = 19.910000
+Value at 102.000000 = 15.793631
+*/
