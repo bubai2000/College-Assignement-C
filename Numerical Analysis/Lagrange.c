@@ -9,8 +9,10 @@ void main()
     float x[5],y[5],x1,p=1,q=1,r,sum=0;
     for(int i=0;i<5;i++)
     {
-        printf("\n Enter x %d, y %d =>",i+1,i+1);
-        scanf("%f %f",&x[i],&y[i]);
+        printf("\n Enter x %d=>",i+1);
+        scanf("%f",&x[i]);
+        printf("\n Enter y %d =>",i+1);
+        scanf("%f",&y[i]);
     }
     printf("\n Enter point at which value to be calculated=>");
     scanf("%f",&x1);
@@ -37,22 +39,32 @@ void main()
 }
 /* Output
 
- Enter x 1, y 1 =>93.0 11.38
+ Enter x 1=>6.54
 
- Enter x 2, y 2 =>96.2 12.80
+ Enter y 1 =>2.8156
 
- Enter x 3, y 3 =>100.0 14.70
+ Enter x 2=>6.58
 
- Enter x 4, y 4 =>104.2 17.07
+ Enter y 2 =>2.8182
 
- Enter x 5, y 5 =>108.7 19.91
+ Enter x 3=>6.59
 
- Enter point at which value to be calculated=>102
+ Enter y 3 =>2.8189
 
- x1 = 93.000000, y1 = 11.380000
- x2 = 96.199997, y2 = 12.800000
- x3 = 100.000000, y3 = 14.700000
- x4 = 104.199997, y4 = 17.070000
- x5 = 108.699997, y5 = 19.910000
-Value at 102.000000 = 15.793631
+ Enter x 4=>6.61
+
+ Enter y 4 =>2.8202
+
+ Enter x 5=>6.64
+
+ Enter y 5 =>2.8222
+
+ Enter point at which value to be calculated=>6.60
+
+ x1 = 6.540000, y1 = 2.815600
+ x2 = 6.580000, y2 = 2.818200
+ x3 = 6.590000, y3 = 2.818900
+ x4 = 6.610000, y4 = 2.820200
+ x5 = 6.640000, y5 = 2.822200
+Value at 6.600000 = 2.819566
 */

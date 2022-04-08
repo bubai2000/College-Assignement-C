@@ -26,20 +26,20 @@ void main()
     }
     printf("Enter point at which value to be calculated=>");
     scanf("%f",&x1);
-    sum=y[0][0];
+    sum=y[0][5];
     h=x[1]-x[0];
     for(int i=1;i<6;i++)
     {
-        for(int j=0;j<i;j++)
+        for(int j=i;j<=6;j++)
         {
-            y[i][j]=y[i-1][j+1]-y[i-1][j];
+            y[i][j]=y[i-1][j]-y[i-1][j-1];
         }
     }
     for(int i=1;i<6;i++)
     {
         q=1;
-        p*=(x1-x[i-1]);
-        q=(y[i][0]*p)/(fact(i)*pow(h,i));
+        p*=(x1-x[6-i]);
+        q=(y[i][5]*p)/(fact(i)*pow(h,i));
         sum+=q;
     }
     printf("Value at %f = %f", x1, sum);  
@@ -69,6 +69,6 @@ void main()
  Enter x 6=>50
 
  Enter y 6 =>1.19175
-Enter point at which value to be calculated=>45.3
-Value at 45.299999 = 1.018987
+Enter point at which value to be calculated=>49.6
+Value at 49.599998 = 1.174999
 */
