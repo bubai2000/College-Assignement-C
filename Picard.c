@@ -1,31 +1,29 @@
 #include<stdio.h>
 #include<math.h>
 
-float f(float x)
+float f(float x, float y)
 {
-    return (pow(x,2));
+    return (pow(x,2)+pow(y,2));
 }
 float simp(float y)
 {
     float a=0,b=0.4,h,sum=0,I;
     int n=24;
     h=(b-a)/n;
-    printf("\n y=%f",y);
-    sum+=f(a);
+    sum+=f(a,y);
     for(int i=1;i<n;i++)
     {
         if(i%2==0)
         {
-            sum+=(2*f((a+(i*h))));
+            sum+=(2*f((a+(i*h)),y));
         }    
         else
         {
-            sum+=(4*f((a+(i*h))));
+            sum+=(4*f((a+(i*h)),y));
         } 
     }
-    sum+=f(b);
+    sum+=f(b,y);
     I=(h/3)*sum;
-    I+=(0.4*y);
     return I;
 }
 void main()
@@ -35,7 +33,6 @@ void main()
     for(int i=0;i<3;i++)
     {
         y=y0+simp(y);
-        printf("\n y= %f",y);
     }
     printf("\n Result=%f",y);
 }
