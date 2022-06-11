@@ -1,30 +1,47 @@
-/* 
-Euler Method
-Roll no.: MTUG/118/19
-*/
+/* Euler's method
+Roll no.: MTUG/119/19 */
 #include<stdio.h>
 #include<math.h>
-float f(float x, float y)
+float f (float x, float y)
 {
-    return log10(x+y);
+	return (log10(x+y));
 }
-
-void main()
+int main()
 {
-    float x0=0,xn=0.4,h=0.2,y0=1.0;
-    int n,i;
-    n=(int)((xn-x0)/h);
-    for(i=0;i<n;i++)
+	int i;
+	float xi,yi,xf,h,y;
+	printf("Enter the initial values of X and Y\n");
+	scanf("%f%f",&xi,&yi);
+	printf("Enter the step width h:\n");
+	scanf("%f",&h);
+	printf("Enter the value of X for which you want to find the value of Y\n");
+	scanf("%f",&xf);
+	printf("x\t\ty\t\ty'\t\thy'\t\ty'+hy'\n");
+	for(i=0;i<2;i++)
     {
-        y0+=h*f(x0,y0);
-        x0+=h;
-        printf("\n y(%0.1f)=%0.4f",x0,y0);
+		while (xi<xf)
+	    {
+		    y=yi+h*f(xi,yi);
+		    printf("\n %f\t %f\t %f\t %f\t %f",xi,yi,f(xi,yi),h*f(xi,yi),y);
+		    yi=y;
+		    xi=xi+h;
+	    }
     }
-    getchar();
+	printf("\nX= %f\t Y=%f\n",xi,yi);
+	printf("The value of y is %0.5f\n\n",yi);
 }
-/* Output
 
- y(0.2)=1.0000
- y(0.4)=1.0158
+/*Output
+Enter the initial values of X and Y
+0 1
+Enter the step width h:
+.2
+Enter the value of X for which you want to find the value of Y
+.4
+x               y               y'              hy'             y'+hy'
 
+ 0.000000        1.000000        0.000000        0.000000        1.000000
+ 0.200000        1.000000        0.079181        0.015836        1.015836
+X= 0.400000      Y=1.015836
+The value of y is 1.01584
 */
