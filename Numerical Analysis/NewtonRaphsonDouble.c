@@ -6,11 +6,11 @@ Roll no.: MTUG/118/19
 #include<math.h>
 float f(float x)
 {
-    return (pow(x,2)-(2*pow(2,0.5)*x)+2);
+    return (pow(x,3)+(2*(2-sqrt(2))*pow(x,2))+(2*(1-(4*sqrt(2)))*x)+8);
 }
 float fd(float x)
 {
-    return ((2*x)-(2*pow(2,0.5)));
+    return ((3*pow(x,2))+(4*(2-sqrt(2))*x)+(2*(1-(4*sqrt(2)))));
 }
 void main()
 {
@@ -22,7 +22,7 @@ void main()
         a=x;
         x=(a-((2*(f(a)))/(fd(a))));
         n++;
-    }while((fabs(x-a))<0.000001);
+    }while((fabs(x-a))>0.000001);
     printf("\n Total no of iterations=>%d",n);
     printf("\n Approximate double root=> %f (Correct upto 6 decimal!)",x);
 }
