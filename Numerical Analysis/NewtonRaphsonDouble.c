@@ -14,7 +14,7 @@ float fd(float x)
 }
 void main()
 {
-    float a=0,x=0,f1;
+    float a=0,x=0;
     int n=0; 
     // x=(a-((2*f(a))/(fd(a))));
     do
@@ -22,7 +22,7 @@ void main()
         a=x;
         x=(a-((2*(f(a)))/(fd(a))));
         n++;
-    }while((fabs(x-a))>0.000001);
+    }while((fabs(x-a))>=0.000001);
     printf("\n Total no of iterations=>%d",n);
     printf("\n Approximate double root=> %f (Correct upto 6 decimal!)",x);
 }
