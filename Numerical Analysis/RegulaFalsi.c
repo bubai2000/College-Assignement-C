@@ -10,17 +10,13 @@ float f(float x)
 }
 void main()
 {
-    float a=0.0,b=0.1,c,x,y,r,f1;
-    int n=0; 
-    while(f(a)*f(b)>=0)
-    {
-        a=b;
-        b+=0.1;
-    }
+    float a=0.0,b=0.1,c,x,y,r,f1,f2;
+    printf("Enter a,b,tolerance=>");
+    scanf("%f%f%f",&a,&b,&f2);
     while(1)
     {
         f1=b-a;
-        if(f1<0.000001)
+        if(f1<f2)
         {
             break;
         }
@@ -36,9 +32,7 @@ void main()
         {
             a=c;
         }
-        n++;
       }
-      printf("\n Total no of iterations=>%d",n);
       printf("\n Approximate root=> %f (Correct upto 6 decimal!)",c);
 }
 
