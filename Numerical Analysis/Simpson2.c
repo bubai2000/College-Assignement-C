@@ -12,7 +12,7 @@ float f(float x)
 
 void main()
 {
-    float a, b,h, sum, I;
+    float a, b,h, sum=0, I;
     int i,n=24;
     a=(M_PI*20)/180;
     b=(M_PI*50)/180;
